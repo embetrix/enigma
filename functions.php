@@ -87,7 +87,12 @@
 			'service_3_title'=>__("WordPress", 'enigma' ),
 			'service_3_icons'=>"fa fa-wordpress",
 			'service_3_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'enigma' ),
-			'service_3_link'=>"#",			
+			'service_3_link'=>"#",	
+
+			'service_4_title'=>__("WordPress", 'enigma' ),
+			'service_4_icons'=>"fa fa-wordpress",
+			'service_4_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'enigma' ),
+			'service_4_link'=>"#",			
 
 			//Portfolio Settings:
 			'portfolio_home'=>'1',

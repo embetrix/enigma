@@ -455,6 +455,16 @@ $wp_customize->add_section(
 		)
 	);
 	$wp_customize->add_setting(
+	'enigma_options[service_4_icons]',
+		array(
+		'default'=>esc_attr($wl_theme_options['service_4_icons']),
+		'type'=>'option',
+		'capability'=>'edit_theme_options',
+		'sanitize_callback'=>'enigma_sanitize_text',
+		
+		)
+	);
+	$wp_customize->add_setting(
 	'enigma_options[service_1_title]',
 		array(
 		'default'=>esc_attr($wl_theme_options['service_1_title']),
@@ -476,6 +486,15 @@ $wp_customize->add_section(
 	'enigma_options[service_3_title]',
 		array(
 		'default'=>esc_attr($wl_theme_options['service_3_title']),
+		'type'=>'option',
+		'sanitize_callback'=>'enigma_sanitize_text',
+		'capability'=>'edit_theme_options',
+		)
+	);
+	$wp_customize->add_setting(
+	'enigma_options[service_4_title]',
+		array(
+		'default'=>esc_attr($wl_theme_options['service_4_title']),
 		'type'=>'option',
 		'sanitize_callback'=>'enigma_sanitize_text',
 		'capability'=>'edit_theme_options',
@@ -508,6 +527,15 @@ $wp_customize->add_section(
 		'capability'=>'edit_theme_options',
 		)
 	);
+	$wp_customize->add_setting(
+	'enigma_options[service_4_text]',
+		array(
+		'default'=>esc_attr($wl_theme_options['service_4_text']),
+		'type'=>'option',
+		'sanitize_callback'=>'enigma_sanitize_text',
+		'capability'=>'edit_theme_options',
+		)
+	);
 	
 	$wp_customize->add_setting(
 	'enigma_options[service_1_link]',
@@ -529,6 +557,14 @@ $wp_customize->add_section(
 	'enigma_options[service_3_link]',
 		array(
 		'default'=>esc_attr($wl_theme_options['service_3_link']),
+		'type'=>'option',
+		'capability'=>'edit_theme_options',
+		'sanitize_callback'=>'esc_url_raw',
+		));
+	$wp_customize->add_setting(
+	'enigma_options[service_4_link]',
+		array(
+		'default'=>esc_attr($wl_theme_options['service_4_link']),
 		'type'=>'option',
 		'capability'=>'edit_theme_options',
 		'sanitize_callback'=>'esc_url_raw',
@@ -649,6 +685,40 @@ $wp_customize->add_section(
 		'type'=>'url',
 		'section'    => 'service_section',
 		'settings'   => 'enigma_options[service_3_link]'
+	) );
+		$wp_customize->add_control(new enigma_Customize_Misc_Control(
+        $wp_customize, 'enigma_service_options4-line',
+        array(
+            'section'  => 'service_section',
+            'type'     => 'line'
+        )
+    ));
+	$wp_customize->add_control( 'enigma_service_four_title', array(
+		'label'        => __( 'Service Four Title', 'enigma' ),
+		'type'=>'text',
+		'section'    => 'service_section',
+		'settings'   => 'enigma_options[service_4_title]'
+	) );
+	$wp_customize->add_control('enigma_options[service_4_icons]',
+        array(
+			'label'        => __( 'Service Icon Four', 'enigma' ),
+			'description'=>__('<a href="http://fontawesome.io/icons/">FontAwesome Icons</a>','enigma'),
+            'section'  => 'service_section',
+			'type'=>'text',
+			'settings'   => 'enigma_options[service_4_icons]'
+        )
+    );
+	$wp_customize->add_control( 'enigma_service_four_text', array(
+		'label'        => __( 'Service Four Text', 'enigma' ),
+		'type'=>'text',
+		'section'    => 'service_section',
+		'settings'   => 'enigma_options[service_4_text]'
+	) );
+	$wp_customize->add_control( 'service_4_link', array(
+		'label'        => __( 'Service Four Link', 'enigma' ),
+		'type'=>'url',
+		'section'    => 'service_section',
+		'settings'   => 'enigma_options[service_4_link]'
 	) );
 /* Portfolio Section */
 	$wp_customize->add_section(

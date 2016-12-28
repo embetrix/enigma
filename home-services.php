@@ -14,7 +14,7 @@
 <?php } ?>
 <div class="container">
 		<div class="row isotope" id="isotope-service-container">		
-			<?php for($i=1; $i<4; $i++ ) { ?>
+			<?php for($i=1; $i<5; $i++ ) { ?>
 			<div class=" col-md-4 service">
 				<div class="enigma_service_area appear-animation bounceIn appear-animation-visible">
 					<?php if($wl_theme_options['service_'.$i.'_icons'] !='') { ?><div class="enigma_service_iocn pull-left"><i class="<?php echo esc_attr($wl_theme_options['service_'.$i.'_icons']); ?>"></i></div><?php } ?> 
