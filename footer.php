@@ -46,7 +46,7 @@
 	                <?php } if($wl_theme_options['qq_link']!='') { ?>
 					<li class="youtube" data-toggle="tooltip" data-placement="top" title="qq"><a href="<?php echo esc_url($wl_theme_options['qq_link']) ; ?>"><i class="fa fa-qq"></i></a></li>
 	                <?php } if($wl_theme_options['whatsapp_link']!='') { ?>
-					<li class="linkedin" data-toggle="tooltip" data-placement="top" title="bitbucket"><a href="<?php echo esc_attr($wl_theme_options['whatsapp_link']) ; ?>""><i class="fa fa-bitbucket"></i></a></li>
+					<li class="linkedin" data-toggle="tooltip" data-placement="top" title="github"><a href="<?php echo esc_attr($wl_theme_options['whatsapp_link']) ; ?>""><i class="fa fa-github"></i></a></li>
 	                <?php } ?>
 				</ul>
 			</div>
